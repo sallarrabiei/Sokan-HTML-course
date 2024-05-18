@@ -1,0 +1,199 @@
+/*
+This is style file. Breakpoints are: 768px & 480px
+You can edit each section based on the following index:
+0- Generals
+    # Variables
+1- Header
+    # Logo
+    # Navigation
+    # Responsive menu
+2- Navigation
+3- Slider
+4- Last-article
+5- Footer
+6- Contents
+7- About-us
+8- Contact-us
+*/
+
+/* 0- Generals */
+
+:root {
+    
+    /* Color Variabales  */
+    --color-dark: #000;
+    --color-gray: #2e2e2e;
+    --color-light-gray: #4b4b4b;
+    --color-light: #ebebeb;
+    --color-white: #fff;
+    --color-primary: #3636eb;
+
+    /* Fonts Variables */
+    --text-larg: 24px;
+    --text-normal: 16px;
+    --text-small: 12px;
+
+}
+
+
+h1, h2, h3, h4, h5, h6, p, span, ul, li, ol {
+    font-family: Vazirmatn !important;
+}
+
+a {
+    text-decoration: none;
+}
+
+.ska-site-container {
+    width: 100%;
+    overflow: hidden;
+    overflow-y: scroll;
+    padding: 0;
+    margin: 0;
+}
+
+.ska-row {
+    width: 95%;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+
+/* 1- Header */
+.ska-header {
+    --header-height: 5rem;
+    z-index: 10 ;
+    width: 100%;
+    background-color: var(--color-light);
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+/* Logo */
+.ska-header-logo {
+    width: 110px;
+    height: var(--header-height);
+    margin-left: auto;
+    position: relative;
+}
+
+.ska-header-logo a {
+    display: block;
+    height: auto;
+    padding: 0;
+    transition: all 1s;
+    transform: translateY(-50%);
+    position: absolute;
+    left: 0;
+    top:50%;
+}
+.ska-header-logo img {
+    vertical-align: top;
+    width: 110px;
+    height: auto;
+    margin: 0;
+}
+
+/* Navigation */
+.ska-header-nav {
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+
+.ska-header-nav ul {
+    display: block;
+    text-align: right;
+    padding: 0;
+    margin: 0;
+}
+
+.ska-header-nav li {
+    list-style: none;
+    display: inline-block;
+    position: relative;
+    padding: 0;
+    margin: 0;
+}
+
+.ska-header-nav a {
+    display: block;
+    padding: 0 18px;
+    line-height: var(--header-height);
+    color: var(--color-dark);
+}
+
+.ska-header-nav a.ska-current {
+    color: var(--color-light);
+    background-color: var(--color-primary);
+}
+
+.ska-header-nav a:not(.ska-current):hover {
+    color: var(--color-primary);
+}
+
+.ska-header-toggle {
+    font-size: var(--text-larg);
+    position: absolute;
+    top: 0;
+    right: 0;
+    line-height: var(--header-height);
+    height: var(--header-height);
+    display: none;
+    border: 0px;
+}
+
+/* Responsive Menu */
+@media screen and (max-width: 768px) {
+    .ska-header .ska-row {
+        width: 100%;
+        padding: 0;
+        display: block;
+    }
+    .ska-header-nav {
+        display: none;
+        height: auto;
+        width: auto;
+        background-color: var(--color-gray);
+        padding: 3rem 5rem;
+        border-top: 1px solid var(--color-dark);
+    }
+    .ska-header-logo {
+        margin: 0 auto;
+    }
+    .ska-header-nav ul {
+        display: block;
+        margin: 0 2rem;
+    }
+    .ska-header-nav ul li {
+        display: block;
+        border-bottom: 1px solid var(--color-dark);
+    }
+    .ska-header-nav a.ska-current {
+        background-color: transparent;
+        color: var(--color-white);
+        border-bottom: 1px solid var(--color-light);
+        font-weight: 700;
+    }
+    .ska-header-nav a:not(.ska-current) {
+        color: var(--color-light)
+    }
+    .ska-header-toggle {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .ska-header-nav {
+        padding: 2rem 2rem;
+    }
+}
+
+@media screen and (min-width: 769px) {
+    .ska-header-nav {
+        display: block !important;
+    }
+    
+}
